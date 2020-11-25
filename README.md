@@ -1,2 +1,1 @@
-# MarkdownPluginRelease
-The Markdown Plugin for MadCap Flare
+# The Markdown Plugin for MadCap Flare
