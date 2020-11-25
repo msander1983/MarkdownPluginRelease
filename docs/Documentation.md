@@ -24,7 +24,7 @@
 
 The settings for converting Markdown to Flare topics are set in a file called `MarkdownSettings.xml`, which is placed either in your Flare project, or in your application data folder in Windows. If a Flare project has a settings file - that file takes precedence over the settings file in the application data folder. 
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Settings>
   <HeaderlessTables>true</HeaderlessTables>
@@ -42,17 +42,21 @@ ComplexTables | If **true** - adjacent empty table cells to the right are merged
 
 With the MarkdownCommander CLI you can import and export files using the command line. 
 
-```
+
 To import Markdown files to topics:
+```
 C:\>MarkdownCommander -export "C:\...\from-folder"" ""C:\...\to-folder"
 C:\>MarkdownCommander -export "C:\...\from-folder\myfile.md" "C:\...\to-folder"
-------------------------------------------------
+```
 To export topics to Markdown files: 
+```
 C:\>MarkdownCommander -export "C:\...\from-folder"" ""C:\...\to-folder"
 C:\>MarkdownCommander -export "C:\...\from-folder\mytopic.htm" "C:\...\to-folder"
-------------------------------------------------
-/f : Force overwrite
-/i : Include sub-folders
-/t : Generate output to console (single file only)
-/s : Suppress dialogs.
 ```
+| Flag | Comment | 
+| --- | ---|
+| /f | Force overwrite |
+| /i | Include sub-folders |
+| /t | Generate output to console (single file only) |
+| /s | Suppress dialogs. |
+
