@@ -63,3 +63,20 @@ C:\>MarkdownCommander -export "C:\...\from-folder\mytopic.htm" "C:\...\to-folder
 | /t | Generate output to console (single file only) |
 | /s | Suppress dialogs. |
 | /settings:[file] | Uses a specific settings file for the Markdown import, e.g. `"/settings:C:\users\mattias\my files\mySettings.xml"` |
+
+## Ignoring files
+* To keep files from being imported, you can set up a `.markdownimportignore` file in the source folder.
+* To keep files from being exported, you can set up a `.markdownexportignore` file in the source folder.
+
+The syntax is based on wildcards, where
+* `*` represents a range of wildcard characters, and 
+* `?` represents a single wildcard character
+
+To ensure that the .ignore rules are processed relative to the folder of the .ignore file the line in the ignore file must contain `\`.
+
+### Examples
+| Rule | Comment |
+| --- | ---- |
+| `*\Lorem.md` | Excludes the files called `Lorem.md` in any subfolder to the folder with the rule file | 
+| `\Lorem.md` | Excludes the `Lorem.md` file from the folder with the rule file | 
+| `*Lorem*`  |  Excludes any file with `Lorem` in its full path. | 
