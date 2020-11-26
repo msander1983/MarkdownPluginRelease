@@ -19,7 +19,7 @@
 * Overwrite the content of the current topic with the converted content from its corresponding Markdown file.
 * Refresh all topics and snippets in a folder from the corresponding Markdown files. 
 
-**NOTE:** If a topic is called `Topic.htm`, the corresponding Markdown file would be `Topic.md`, and for a snippet called ´Snippet.flsnp´, the corresponding Markdown files is `Snippet.flsnp.md`.
+**NOTE:** If a topic is called `Topic.htm`, the corresponding Markdown file would be `Topic.md`, and for a snippet called `Snippet.flsnp`, the corresponding Markdown files is `Snippet.flsnp.md`.
 
 ### Settings
 
