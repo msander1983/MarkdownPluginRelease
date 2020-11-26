@@ -13,6 +13,7 @@
 
 ### Synchronize to Markdown
 * Convert the current topic to Markdown.
+* Sync a folder of topics and snippets to Markdown.
 
 ### Refresh from Markdown
 * Overwrite the content of the current topic with the converted content from its corresponding Markdown file.
