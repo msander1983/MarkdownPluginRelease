@@ -47,11 +47,13 @@ To import Markdown files to topics:
 ```
 C:\>MarkdownCommander -export "C:\...\from-folder"" ""C:\...\to-folder"
 C:\>MarkdownCommander -export "C:\...\from-folder\myfile.md" "C:\...\to-folder"
+C:\>MarkdownCommander -export "C:\...\from-folder\myfile.md" "C:\...\to-folder\myfile.htm"
 ```
 To export topics to Markdown files: 
 ```
 C:\>MarkdownCommander -export "C:\...\from-folder"" ""C:\...\to-folder"
 C:\>MarkdownCommander -export "C:\...\from-folder\mytopic.htm" "C:\...\to-folder"
+C:\>MarkdownCommander -export "C:\...\from-folder\mytopic.htm" "C:\...\to-folder\mytopic.md"
 ```
 | Flag | Comment | 
 | --- | ---|
@@ -59,4 +61,4 @@ C:\>MarkdownCommander -export "C:\...\from-folder\mytopic.htm" "C:\...\to-folder
 | /i | Include sub-folders |
 | /t | Generate output to console (single file only) |
 | /s | Suppress dialogs. |
-
+| /settings:[file] | Uses a specific settings file for the Markdown import, e.g. `"/settings:C:\users\mattias\my files\mySettings.xml"` |
