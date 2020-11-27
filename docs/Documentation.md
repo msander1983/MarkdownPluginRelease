@@ -46,9 +46,9 @@ With the MarkdownCommander CLI you can import and export files using the command
 
 To import Markdown files to topics:
 ```
-C:\>MarkdownCommander -export "C:\...\from-folder"" ""C:\...\to-folder"
-C:\>MarkdownCommander -export "C:\...\from-folder\myfile.md" "C:\...\to-folder"
-C:\>MarkdownCommander -export "C:\...\from-folder\myfile.md" "C:\...\to-folder\myfile.htm"
+C:\>MarkdownCommander -import "C:\...\from-folder"" ""C:\...\to-folder"
+C:\>MarkdownCommander -import "C:\...\from-folder\myfile.md" "C:\...\to-folder"
+C:\>MarkdownCommander -import "C:\...\from-folder\myfile.md" "C:\...\to-folder\myfile.htm"
 ```
 To export topics to Markdown files: 
 ```
