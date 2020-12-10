@@ -1,5 +1,14 @@
 # The Markdown Plugin for MadCap Flare
 
+## Release Notes 
+
+### 0.2 
+* Added **RemoveAttributesOnExport** to settings. 
+   * If set to **true** the HTML file is exported to Markdown without attributes. 
+   * If set to **false** - any HTML element with attributes is exported as HTML to the Markdown file. 
+
+# Documentation
+
 ## Flare Plugin
 
 ### Import to Flare
@@ -36,8 +45,9 @@ The settings for converting Markdown to Flare topics are set in a file called `M
 These are the settings you can make: 
 | Settings | Comment | 
 | --- | --- | 
-HeaderlessTables | If **true** - Markdown tables without headers are converted to headerless tables. If **false** - tables are converted with headers, even if the Markdown tables don't have headers. |
-ComplexTables | If **true** - adjacent empty table cells to the right are merged with the previous cell. |
+HeaderlessTables | If **true** (default) - Markdown tables without headers are converted to headerless tables. If **false** - tables are converted with headers, even if the Markdown tables don't have headers. |
+ComplexTables | If **true** - adjacent empty table cells to the right are merged with the previous cell. The default setting is **false**|
+RemoveAttributesOnExport |  If set to **true** the HTML file is exported to Markdown without attributes.  If set to **false** (default) - any HTML element with attributes is exported as HTML to the Markdown file. |
 
 ## MarkdownCommander.exe CLI
 
