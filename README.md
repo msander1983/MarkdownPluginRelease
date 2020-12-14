@@ -2,17 +2,7 @@
 
 ## Release Notes 
 
-### 0.2.2
-* The "get latest version" button now checks the version _and_ downloads the new installer from the right place. 
-
-### 0.2.1
-* Corrected a bug where a HTML table would be converted to Markdown even if it had a child element with an attribute. Now, HTML elements with child elements that have attributes are not converted. 
-* Corrected a bug where tables where converted to Markdown even if the HTML elements had attributes. 
-
-### 0.2 
-* Added **RemoveAttributesOnExport** to settings. 
-   * If set to **true** the HTML file is exported to Markdown without attributes. 
-   * If set to **false** - any HTML element with attributes is exported as HTML to the Markdown file. 
+See the [release information](https://github.com/msander1983/MarkdownPluginRelease/releases).
 
 # Documentation
 
