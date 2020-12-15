@@ -36,6 +36,7 @@ The settings for converting Markdown to Flare topics are set in a file called `M
 <Settings>
   <HeaderlessTables>true</HeaderlessTables>
   <ComplexTables>false</ComplexTables>
+  <RemoveAttributesOnExport>false</RemoveAttributesOnExport>
 </Settings>
 ```
 
