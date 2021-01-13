@@ -20,10 +20,12 @@ See the [release information](https://github.com/msander1983/MarkdownPluginRelea
 ### Synchronize to Markdown
 * Convert the current topic to Markdown.
 * Sync a folder of topics and snippets to Markdown.
+* Sync all topics and snippets in your Flare project to Markdown.
 
 ### Refresh from Markdown
 * Overwrite the content of the current topic with the converted content from its corresponding Markdown file.
 * Refresh all topics and snippets in a folder from the corresponding Markdown files. 
+* Refresh all topics and snippets in your Flare project from Markdown.
 
 **NOTE:** If a topic is called `Topic.htm`, the corresponding Markdown file would be `Topic.md`, and for a snippet called `Snippet.flsnp`, the corresponding Markdown files is `Snippet.flsnp.md`.
 
@@ -37,6 +39,9 @@ The settings for converting Markdown to Flare topics are set in a file called `M
   <HeaderlessTables>true</HeaderlessTables>
   <ComplexTables>false</ComplexTables>
   <RemoveAttributesOnExport>false</RemoveAttributesOnExport>
+  <ConvertXrefs>false</ConvertXrefs>
+  <ConvertLocalLinksToXref>false</ConvertLocalLinksToXref>
+  <ExportYaml>false</ExportYaml>
 </Settings>
 ```
 
@@ -46,11 +51,52 @@ These are the settings you can make:
 HeaderlessTables | If **true** (default) - Markdown tables without headers are converted to headerless tables. If **false** - tables are converted with headers, even if the Markdown tables don't have headers. |
 ComplexTables | If **true** - adjacent empty table cells to the right are merged with the previous cell. The default setting is **false**|
 RemoveAttributesOnExport |  If set to **true** the HTML file is exported to Markdown without attributes.  If set to **false** (default) - any HTML element with attributes is exported as HTML to the Markdown file. |
+ConvertXrefs | If set to **true** any MadCap:xref elements are converted to Markdown as regular hyperlinks. 
+ConvertLocalLinksToXref | If set to **true** any local links are converted to MadCap:xref when converting from Markdown to Flare.
+ExportYaml | Exports meta-data and conditions, condition tag expressions, and file tags from your Flare topics and snippets to YAML in the Markdown file. 
+
+### YAML meta data
+If a Markdown file contains YAML dat, the YAML tags are converted to meta-tags in Flare. 
+* There are a few special cases that are processed differently:
+  * **conditions** are converted to the conditions of the topic or snippet.
+  * **conditionTagExpression** are converted to the snippet conditions of the topic or snippet. 
+  * **fileTags** are converted to file tags for the topic or snippet.
+
+For example,
+
+```yaml
+description: Lorem ipsum dolor
+keywords: lorem, ipsum, dolor
+category: lorem
+```
+is imported into Flare as 
+
+```html
+<meta name="description" content="Lorem ipsum dolor" />
+<meta name="keywords" content="lorem, ipsum, dolor" />
+<meta name="category" content="lorem" />
+```
+
+and this YAML code
+
+```yaml
+---
+conditions: Default.Mobile,Default.Tablet
+conditionTagExpression: include[Default.Mobile], exclude[Default.Tablet]
+fileTags: Author.Author1,Author.Author2
+---
+```
+
+is imported as 
+
+```html
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Mobile,Default.Tablet" 
+      MadCap:conditionTagExpression="include[Default.Mobile], exclude[Default.Tablet]" MadCap:snippetVariables="General.VersionNumber:1231231223," MadCap:fileTags="Author.Author1,Author.Author2">
+```
 
 ## MarkdownCommander.exe CLI
 
 With the MarkdownCommander CLI you can import and export files using the command line. 
-
 
 To import Markdown files to topics:
 ```
