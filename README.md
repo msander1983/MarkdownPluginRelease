@@ -1,4 +1,4 @@
-# The Markdown Plugin for MadCap Flare
+# The Markdown Plugin II for MadCap Flare
 
 ## Release Notes 
 
