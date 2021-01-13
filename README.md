@@ -53,7 +53,7 @@ ComplexTables | If **true** - adjacent empty table cells to the right are merged
 RemoveAttributesOnExport |  If set to **true** the HTML file is exported to Markdown without attributes.  If set to **false** (default) - any HTML element with attributes is exported as HTML to the Markdown file. |
 ConvertXrefs | If set to **true** any MadCap:xref elements are converted to Markdown as regular hyperlinks. 
 ConvertLocalLinksToXref | If set to **true** any local links are converted to MadCap:xref when converting from Markdown to Flare.
-ExportYaml | Exports meta-data and conditions, condition tag expressions, and file tags from your Flare topics and snippets to YAML in the Markdown file. 
+ExportYaml | If set to **true** meta-data and conditions, condition tag expressions, and file tags are exported from your Flare topics and snippets to YAML in the Markdown file. 
 
 ### YAML meta data
 If a Markdown file contains YAML dat, the YAML tags are converted to meta-tags in Flare. 
@@ -91,7 +91,8 @@ is imported as
 
 ```html
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Mobile,Default.Tablet" 
-      MadCap:conditionTagExpression="include[Default.Mobile], exclude[Default.Tablet]" MadCap:snippetVariables="General.VersionNumber:1231231223," MadCap:fileTags="Author.Author1,Author.Author2">
+      MadCap:conditionTagExpression="include[Default.Mobile], exclude[Default.Tablet]" 
+      MadCap:snippetVariables="General.VersionNumber:1231231223," MadCap:fileTags="Author.Author1,Author.Author2">
 ```
 
 ## MarkdownCommander.exe CLI
