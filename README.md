@@ -4,30 +4,31 @@
 
 See the [release information](https://github.com/msander1983/MarkdownPluginRelease/releases).
 
-# Documentation
-
-## Flare Plugin
-
-### Import to Flare
+## Import to Flare
 * Import a folder with Markdown files to Flare topics.
 * Import a folder with Markdown files to Flare snippets.
-* Convert a Flare topics to a Flare TOC file (Experimental).
 
-### Export to Markdown
+## Export to Markdown
 * Export a Flare topic or snippet to a Markdown file.
 * Export a folder of topics and snippets to Markdown files. 
 
-### Synchronize to Markdown
+## Convert to Markdown
 * Convert the current topic to Markdown.
-* Sync a folder of topics and snippets to Markdown.
-* Sync all topics and snippets in your Flare project to Markdown.
+* Convert a folder of topics and snippets to Markdown.
+* Convert all topics and snippets in your Flare project to Markdown.
 
-### Refresh from Markdown
+## Refresh from Markdown
 * Overwrite the content of the current topic with the converted content from its corresponding Markdown file.
 * Refresh all topics and snippets in a folder from the corresponding Markdown files. 
 * Refresh all topics and snippets in your Flare project from Markdown.
 
 **NOTE:** If a topic is called `Topic.htm`, the corresponding Markdown file would be `Topic.md`, and for a snippet called `Snippet.flsnp`, the corresponding Markdown files is `Snippet.flsnp.md`.
+
+## Misc
+* Convert a Flare topics to a Flare TOC file (Experimental).
+
+## Markdown Editor
+Use the built-in Markdown editor to see what your Markdown is converted to with the plugin. 
 
 ### Settings
 
@@ -42,6 +43,9 @@ The settings for converting Markdown to Flare topics are set in a file called `M
   <ConvertXrefs>false</ConvertXrefs>
   <ConvertLocalLinksToXref>false</ConvertLocalLinksToXref>
   <ExportYaml>false</ExportYaml>
+  <UseMadCapCodeSnippet>false</UseMadCapCodeSnippet>
+  <ConvertedCommentedTags>false</ConvertedCommentedTags>
+  <ExportUnsupportedTagsAsComments>false</ExportUnsupportedTagsAsComments>
 </Settings>
 ```
 
@@ -54,7 +58,9 @@ RemoveAttributesOnExport |  If set to **true** the HTML file is exported to Mark
 ConvertXrefs | If set to **true** any MadCap:xref elements are converted to Markdown as regular hyperlinks. 
 ConvertLocalLinksToXref | If set to **true** any local links are converted to MadCap:xref when converting from Markdown to Flare.
 ExportYaml | If set to **true** meta-data and conditions, condition tag expressions, and file tags are exported from your Flare topics and snippets to YAML in the Markdown file. 
-
+UseMadCapCodeSnippet | If set to **true** imports code from Markdown to Flare using the code snippet. 
+ConvertedCommentedTags | If set to **true** - imports commented out HTML tags as HTML.
+ExportUnsupportedTagsAsComments | If set to **true** - exports HTML tags without attributes and that are not supported by the Markdown format to commented HTML tags. Use in conjuction with the **ConvertedCommentedTags** setting. 
 ### YAML meta data
 If a Markdown file contains YAML dat, the YAML tags are converted to meta-tags in Flare. 
 * There are a few special cases that are processed differently:
