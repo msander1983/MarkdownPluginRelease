@@ -46,6 +46,7 @@ The settings for converting Markdown to Flare topics are set in a file called `M
   <UseMadCapCodeSnippet>false</UseMadCapCodeSnippet>
   <ConvertedCommentedTags>false</ConvertedCommentedTags>
   <ExportUnsupportedTagsAsComments>false</ExportUnsupportedTagsAsComments>
+  <ConvertCommentsToAnnotations>false</ConvertCommentsToAnnotations>
 </Settings>
 ```
 
@@ -61,6 +62,7 @@ ExportYaml | If set to **true** meta-data and conditions, condition tag expressi
 UseMadCapCodeSnippet | If set to **true** imports code from Markdown to Flare using the code snippet. 
 ConvertedCommentedTags | If set to **true** - imports commented out HTML tags as HTML.
 ExportUnsupportedTagsAsComments | If set to **true** - exports HTML tags without attributes and that are not supported by the Markdown format to commented HTML tags. Use in conjuction with the **ConvertedCommentedTags** setting. 
+ConvertCommentsToAnnotations | If set to **true** - commented lines `// My comment here` are converted to MadCap:annotations.
 ### YAML meta data
 If a Markdown file contains YAML dat, the YAML tags are converted to meta-tags in Flare. 
 * There are a few special cases that are processed differently:
