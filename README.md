@@ -47,7 +47,7 @@ The settings for converting Markdown to Flare topics are set in a file called `M
   <ConvertedCommentedTags>false</ConvertedCommentedTags>
   <ExportUnsupportedTagsAsComments>false</ExportUnsupportedTagsAsComments>
   <ConvertCommentsToAnnotations>false</ConvertCommentsToAnnotations>
-  <CopyImages></CopyImages>
+  <CopyImages>true</CopyImages>
 </Settings>
 ```
 
