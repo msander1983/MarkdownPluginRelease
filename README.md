@@ -6,4 +6,4 @@ See the [release information](https://github.com/msander1983/MarkdownPluginRelea
 
 ## Documentation
 
-See the [official documentation](https://docs.improvementsoft.com/Content/Documentation/Markdown%20II.htm).
+See the [official documentation](https://docs.improvementsoft.com/index.htm#cshid=markdown2).
